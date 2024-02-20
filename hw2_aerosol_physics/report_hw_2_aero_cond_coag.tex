@@ -1,0 +1,174 @@
+%---------------------
+% START OF PREAMBLE - do not delete!
+%---------------------
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+%==============================================================================
+% Page layout
+%==============================================================================
+
+%------------------------------------------------------------------------------
+%  Define the page dimensions.
+%------------------------------------------------------------------------------
+\setlength{\hoffset}{0.0in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{6.75in}
+
+\setlength{\voffset}{0in}
+\setlength{\topmargin}{-.6in}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{12pt}
+\setlength{\textheight}{9.5in}
+\renewcommand{\baselinestretch}{1.0}
+\renewcommand{\labelitemi}{-}
+
+% writing the section number and the subsection number together
+% and also the subsubsection in the form of 1.a
+\renewcommand\thesubsection{\arabic{section}.\alph{subsection}}
+\renewcommand\thesection{Problem \arabic{section}}
+%------------------------------------------------------------------------------
+
+%---------------------
+% END OF PREAMBLE - do not delete!
+%---------------------
+\documentclass{report}
+\begin{document}
+
+%---------------------
+% make the title
+%---------------------
+\begin{titlepage}
+\centering
+{\LARGE\bfseries Homework 2}
+
+\vspace{1cm}
+
+{\Large Aerosol Physics, Chemistry, Clouds and Climate}
+
+\vspace{2cm}
+
+{\large Masoud Akbarzadeh}
+
+\vspace{2cm}
+
+{ \today }
+
+\vfill
+
+{\itshape Colorado State University}
+\end{titlepage}
+
+
+%---------------------
+
+%---------------------
+% begin main text
+%---------------------
+\section{Condensation}\label{sec:problem-1}
+\subsection{}\label{subsec:problem-1-a}
+The average pressure: $846.33 hPa$, with the standard deviation of: $5.62 hPa$ \\
+The average pressure when it rains: $847.03 hPa$
+
+
+
+
+\subsection{}\label{subsec:problem-1-b}
+Since the number of data points is large enough, a z-test was used.
+Also, since the pressure can be anomalously higher or lower, a two-sided z-test was used.
+\\ Assumptions:
+\begin{itemize}
+    \item Confidence level: 95\% (two-tailed)
+    \item $H_0: \mu = 846.33$
+    \item $H_1: \mu \neq 846.33$
+    \item Z-critical value: 1.96
+\end{itemize}
+\[ Z = \frac{\=X-\mu}{S / \sqrt{N}} = \frac{847.03-846.33}{5.62/\sqrt{384}} = 2.44 > 1.96 \] \\
+Since the z-score is greater than the critical value, the null hypothesis is rejected.
+So the average pressure when it rains is significantly different from the average pressure.
+
+\subsection{}\label{subsec:problem-1-c}
+Using bootstrapping, 100000 samples were generated.
+By calculating the fraction of the time the average pressure when it rains is greater than the average pressure, the p-value was calculated to be 0.007.
+So the likelihood of the average pressure being greater when it rains is about 0.7\%.
+So the results is in agreement with the z-test.\\
+Since the number of data points is large enough, the central limit theorem applies, and the distribution of the sample means is approximately normal.
+So using the z-test is valid.\\
+\\
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=5in]{problem1-partA.png}
+\caption{Problem 1-A}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=5in]{problem1-partC.png}
+\caption{Problem 1-C}
+\end{center}
+\end{figure}
+
+%new page
+\newpage
+\section{Coagulation}\label{sec:problem-2}
+% part A of problem 2 % subsection written in form of 2.a
+\subsection{Hypothesis testing}\label{subsec:problem-2-a}
+Hypothesis testing with these assumptions:
+    % bullet points
+    \begin{itemize}
+        \item # $H_0: \mu = 0$
+        \item Two-tailed confidence interval of 95\%
+        \item Using z-score since the sample size is larger than 30
+        \item A two-tailed test is used
+        \item Z-critical value is 1.96
+        \end{itemize}
+
+\[ Z = \frac{\=X-\mu}{S / \sqrt{N}} = \frac{0.13-0}{1/\sqrt{100}} = 1.3 < 1.96 \] \\
+
+So we cannot reject the null hypothesis that the air is from the west.
+\subsection{Bayesian Approach}\label{subsec:problem-2-b}
+Assuming:
+\begin{itemize}
+    \item $\gamma = 0.4$ is the fraction of time the wind is from the east, and $\gamma = 0.6$ is the fraction of time the wind is from the west
+    \item Calculating the probability of the concentration of a pollutant being between 0.12 and 0.14 instead of exactly 0.13
+\end{itemize}
+Using Bayes' theorem:
+\begin{gather*}
+    Pr(W) = 0.4\\
+    Pr(\=W) = 0.6\\
+    Pr(0.12<\=C_{100}<0.14|W) = 0.034\\
+    Pr(0.12<\=C_{100}<0.14|\=W) = 0.062\\
+    Pr(W|0.12<\=C_{100}<0.14)=\frac{Pr(0.12<\=C_{100}<0.14)Pr(W)}{Pr(0.12<\=C_{100}<0.14)Pr(W)+Pr(0.12<\=C_{100}<0.14|\=W)Pr(\=W)}\\
+    Pr(W|0.12<\=C_{100}<0.14)=0.268 < 0.5\\
+\end{gather*}
+Because $Pr(W|0.12<\=C_{100}<0.14)<0.5$ this approach says the wind is from the east.
+\nextpage
+\subsection{Sensitivity Analysis}\label{subsec:problem-2-c}
+
+Assuming $\gamma$ values are from $0$ to $1$.
+For each of gamma, 10000 monte carlo simulations were run.
+Then the fraction of time each approach gives the correct answer was calculated.
+The results are shown in the figure ~\ref{fig:problem-2-c}.\\
+The results show that for all values of $\gamma$, the Bayesian approach is better than the hypothesis testing approach for this problem.
+This is because the Bayesian approach is using the prior information about the wind direction.
+Also, the Bayesian approach is least effective when $\gamma = 0.5$ while the frequentist approach is least effective when $\gamma = 0$.
+The model in the frequentist approach does not have any knowledge about the wind that is coming from the east, and its probability of happening so the model is only effective in $\gamma$ values close to 1 where the most probable wind is from the west.
+
+
+\begin{figure}\label{fig:problem-2-c}
+\begin{center}
+\includegraphics[width=5in]{problem2-partC.png}
+\caption{Problem 2-C}
+\end{center}
+\end{figure}
+    \item
+
+\end{document}
+
+
