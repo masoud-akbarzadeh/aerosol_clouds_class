@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.19)  20 FEB 2024 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.19)  21 FEB 2024 20:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -173,25 +173,131 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 )) [1
 
 {C:/Users/masou/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[1] [2]
 
-LaTeX Warning: Reference `fig:problem-2-c' on page 3 undefined on input line 10
-0.
+report_hw_2_aero_cond_coag.tex:85: LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \begin{figure}[H]
+                      \label{fig:problem-1-a}
+Option `H' ignored and `p' used.
+
+<hw2_pr1_1_condensation_growth_rate_vs_diameter.png, id=9, 462.528pt x 346.896p
+t>
+File: hw2_pr1_1_condensation_growth_rate_vs_diameter.png Graphic file (type png
+)
+<use hw2_pr1_1_condensation_growth_rate_vs_diameter.png>
+Package pdftex.def Info: hw2_pr1_1_condensation_growth_rate_vs_diameter.png  us
+ed on input line 87.
+(pdftex.def)             Requested size: 361.34999pt x 271.0277pt.
+<hw2_pr1_2_condensation_growth_rate_vs_mass.png, id=11, 462.528pt x 346.896pt>
+File: hw2_pr1_2_condensation_growth_rate_vs_mass.png Graphic file (type png)
+<use hw2_pr1_2_condensation_growth_rate_vs_mass.png>
+Package pdftex.def Info: hw2_pr1_2_condensation_growth_rate_vs_mass.png  used o
+n input line 107.
+(pdftex.def)             Requested size: 361.34999pt x 271.0277pt.
+[1] [2 <./hw2_pr1_1_condensation_growth_rate_vs_diameter.png> <./hw2_pr1_2_cond
+ensation_growth_rate_vs_mass.png>]
+report_hw_2_aero_cond_coag.tex:128: Missing $ inserted.
+<inserted text> 
+                $
+l.128 ...f the brownian coagulation ceofficient K_
+                                                  {12}: \\ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+report_hw_2_aero_cond_coag.tex:130: Missing $ inserted.
+<inserted text> 
+                $
+l.130 $\displaystyle
+                     K_{12} = 2\pi(D_1+D_2)(D_{p1}+D_{p2})(\frac{D_{p1}+D_{p...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--142
+
+ []
+
+report_hw_2_aero_cond_coag.tex:146: Double subscript.
+<argument> dV_p_
+                2
+l.146 $\displaystyle \frac{dV_p_2}{dt}
+                                      =k_{12} N_1 V_p_1 $
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+report_hw_2_aero_cond_coag.tex:146: Double subscript.
+l.146 ...aystyle \frac{dV_p_2}{dt}=k_{12} N_1 V_p_
+                                                  1 $
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+report_hw_2_aero_cond_coag.tex:148: Double subscript.
+<argument> dD_p_
+                2
+l.148 $\displaystyle \frac{dD_p_2}{dt}
+                                      =k_{12} N_1 V_p_1 \frac{2}{\pi D_p_2^2}$
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+report_hw_2_aero_cond_coag.tex:148: Double subscript.
+l.148 ...aystyle \frac{dD_p_2}{dt}=k_{12} N_1 V_p_
+                                                  1 \frac{2}{\pi D_p_2^2}$
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+report_hw_2_aero_cond_coag.tex:148: Double subscript.
+<argument> \pi D_p_
+                   2^2
+l.148 ...t}=k_{12} N_1 V_p_1 \frac{2}{\pi D_p_2^2}
+                                                  $
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+report_hw_2_aero_cond_coag.tex:150: Double subscript.
+<argument> dD_p_
+                2
+l.150 $\displaystyle \frac{dD_p_2}{dt}
+                                      = 8.56E(-3) nm\ hr^{-1}$
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--151
+
+ []
 
 [3]
-<hw2_pr2_1_coagulation_coefficient_vs_diameter.png, id=19, 361.35pt x 433.62pt>
+<hw2_pr2_1_coagulation_coefficient_vs_diameter.png, id=28, 361.35pt x 433.62pt>
 
 File: hw2_pr2_1_coagulation_coefficient_vs_diameter.png Graphic file (type png)
 
 <use hw2_pr2_1_coagulation_coefficient_vs_diameter.png>
 Package pdftex.def Info: hw2_pr2_1_coagulation_coefficient_vs_diameter.png  use
-d on input line 110.
+d on input line 160.
 (pdftex.def)             Requested size: 216.81pt x 260.17401pt.
-<Table_13_5_Fuchs_Coagulation_plot.png, id=21, 666.23906pt x 785.18344pt>
+<Table_13_5_Fuchs_Coagulation_plot.png, id=29, 666.23906pt x 785.18344pt>
 File: Table_13_5_Fuchs_Coagulation_plot.png Graphic file (type png)
 <use Table_13_5_Fuchs_Coagulation_plot.png>
 Package pdftex.def Info: Table_13_5_Fuchs_Coagulation_plot.png  used on input l
-ine 117.
+ine 167.
 (pdftex.def)             Requested size: 216.81pt x 255.51706pt.
  [4 <./hw2_pr2_1_coagulation_coefficient_vs_diameter.png> <./Table_13_5_Fuchs_C
 oagulation_plot.png>]
@@ -201,32 +307,29 @@ g.aux)
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 2075 strings out of 474486
- 33479 string characters out of 5743755
- 1927528 words of memory out of 5000000
- 24375 multiletter control sequences out of 15000+600000
- 563950 words of font info for 56 fonts, out of 8000000 for 9000
+ 2094 strings out of 474486
+ 34391 string characters out of 5743755
+ 1933528 words of memory out of 5000000
+ 24394 multiletter control sequences out of 15000+600000
+ 563643 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,286b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,252b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/masou/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Users/masou/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi12.pfb><C:/Users/masou/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/Users/masou/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/masou/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+ublic/amsfonts/cm/cmmi8.pfb><C:/Users/masou/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/masou/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/masou/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/masou/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/masou/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/m
+asou/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 Output written on "C:/Phd\Aerosol Physics-Jeff\hw_aerosol_physics\out\report_hw
-_2_aero_cond_coag.pdf" (5 pages, 162411 bytes).
+_2_aero_cond_coag.pdf" (5 pages, 253979 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
