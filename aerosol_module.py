@@ -138,7 +138,7 @@ def cond_mass_growth_rate(d_p, c_inf, c_sat, diff_coefficient_vapor, rho_p=1E3):
     # c_inf is the concentration of the condensing vapor in the bulk gas in molec/m^3
     # c_sat is the saturation concentration of the condensing vapor in molec/m^3
     # diff_coefficient is the diffusion coefficient of the condensing vapor in m^2/s
-    # rho_p is the density of the particle in kg/m^3 (default is 1E3 kg/m^3)
+    # rho_p_input is the density of the particle in kg/m^3 (default is 1E3 kg/m^3)
     # m_p is the mass of the particle in kg
     # particle mass
     # J is the same as condensation mass growth rate
@@ -195,7 +195,7 @@ def unit_conversion(conversion, variable=1):
 
 def dp_to_mp_distribution(d_p, rho_p=1E3):
     # Dp is the particle diameter in meters
-    # rho_p is the density of the particle in kg/m^3
+    # rho_p_input is the density of the particle in kg/m^3
     # m_p is the mass of the particle in kg
     m_p = np.pi * rho_p * d_p ** 3 / 6
     return m_p
